@@ -55,6 +55,9 @@ let blockchain = new Blockchain();
 blockchain.addBlock(new Block(1,"01/01/2018",{amount: 4}));
 blockchain.addBlock(new Block(2, "02/01/2018", {amount: 8}));
 
-//console.log('is blockchain is valid?'+blockchain.isChainValid())
+console.log('is blockchain is valid?'+blockchain.isChainValid())
+// change the data of block 1
+blockchain.chain[1].data = {amount: 100};
+console.log('is blockchain valid?'+ blockchain.isChainValid())
 
-console.log(JSON.stringify(blockchain,null,4));
+//console.log(JSON.stringify(blockchain,null,4));
